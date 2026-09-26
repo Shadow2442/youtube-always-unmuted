@@ -30,6 +30,8 @@ Test page: `https://www.youtube.com/watch?v=jNQXAC9IVRw`
 
 Both results are below the required 1,000 ms limit. The YouTube page was reloaded after the replacement test.
 
+After the final early-startup fix, the unpacked extension was reloaded from its Brave extension card and the current-player test was repeated. The reloaded installed build recovered in **113 ms** with volume `1` preserved, confirming that Brave was running the reviewed source.
+
 ## Resource and error checks
 
 - The manifest declares no `background`, `permissions`, or `host_permissions` key.

@@ -64,7 +64,7 @@
           }
         }
       });
-      observer.observe(documentRef.documentElement, {
+      observer.observe(documentRef, {
         childList: true,
         subtree: true,
       });

@@ -36,7 +36,7 @@ function createVideo(muted = false, volume = 0.5) {
   };
 }
 
-function createEnvironment(initialVideo = null) {
+function createEnvironment(initialVideo = null, documentElement = {}) {
   let queryCount = 0;
   let intervalCallback;
   let intervalMs;
@@ -44,7 +44,7 @@ function createEnvironment(initialVideo = null) {
   let observeCount = 0;
 
   const document = {
-    documentElement: {},
+    documentElement,
     querySelector(selector) {
       assert.equal(selector, 'video');
       queryCount += 1;
@@ -58,7 +58,10 @@ function createEnvironment(initialVideo = null) {
     }
 
     observe(target, options) {
-      assert.equal(target, document.documentElement);
+      if (!target) {
+        throw new TypeError('MutationObserver target is required');
+      }
+      assert.equal(target, document);
       assert.deepEqual(options, { childList: true, subtree: true });
       observeCount += 1;
     }
@@ -140,6 +143,14 @@ test('handles a missing video without throwing', () => {
 
   assert.doesNotThrow(() => controller.start());
   assert.equal(controller.check(), false);
+  assert.equal(fixture.observeCount(), 1);
+});
+
+test('starts safely before documentElement exists', () => {
+  const fixture = createEnvironment(null, null);
+  const controller = createController(fixture.environment);
+
+  assert.doesNotThrow(() => controller.start());
   assert.equal(fixture.observeCount(), 1);
 });
 
