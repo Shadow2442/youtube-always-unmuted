@@ -6,10 +6,15 @@
   <meta name="description" content="YouTube Always Unmuted is a tiny, private-by-design Chromium extension that immediately restores YouTube video audio.">
   <title>YouTube Always Unmuted | Project Release</title>
   <link rel="stylesheet" href="styles/site.css">
+  <script src="scripts/site.js" defer></script>
 </head>
 <body>
   <div class="page-shell">
     <header class="hero" id="top">
+      <a class="guide-banner" href="https://github.com/Shadow2442" aria-label="Open the Shadow2442 GitHub profile">
+        <img src="assets/my-guides-banner.png" alt="My Guides — Media, Automation, and Games">
+      </a>
+
       <nav class="topbar" aria-label="Primary navigation">
         <div class="brand-block">
           <span class="eyebrow">Project Transmission</span>
@@ -20,9 +25,43 @@
           <a href="#install">Install</a>
           <a href="#privacy">Privacy</a>
           <a href="#support">Support</a>
+          <span class="nav-counter">
+            <img src="https://visitor-badge.laobi.icu/badge?page_id=Shadow2442.youtube-always-unmuted&amp;left_text=Visitors&amp;left_color=10211f&amp;right_color=37d6e8" alt="Visitor counter for YouTube Always Unmuted">
+          </span>
           <a class="repo-link" href="https://github.com/Shadow2442/youtube-always-unmuted">GitHub Repo</a>
         </div>
       </nav>
+
+      <section class="project-overview glass-card" aria-labelledby="overview-title">
+        <div class="overview-main">
+          <span class="eyebrow">Project Overview</span>
+          <h2 id="overview-title">Never let YouTube begin the next video in silence.</h2>
+          <p>This deliberately tiny extension watches only YouTube's active video element. If the player marks it as muted, audio is restored immediately while your chosen volume remains untouched.</p>
+          <div class="overview-pills" aria-label="Project features">
+            <span>Brave + Chromium</span>
+            <span>Manifest V3</span>
+            <span>No telemetry</span>
+            <span>No background page</span>
+          </div>
+        </div>
+        <aside class="overview-context" aria-label="Release context">
+          <span class="eyebrow">At a glance</span>
+          <dl>
+            <div><dt>Status</dt><dd>Stable</dd></div>
+            <div><dt>Version</dt><dd data-counter="release">v1.0.0</dd></div>
+            <div><dt>Install</dt><dd>Load unpacked</dd></div>
+          </dl>
+          <div class="mini-counter"><span>Open feedback</span><strong data-counter="feedback">--</strong></div>
+        </aside>
+      </section>
+
+      <section class="status-strip" aria-label="Live project counters">
+        <article><span>GitHub Stars</span><strong data-counter="stars">--</strong></article>
+        <article><span>Release Downloads</span><strong data-counter="downloads">--</strong></article>
+        <article><span>Latest Release</span><strong data-counter="release">v1.0.0</strong></article>
+        <article><span>Open Feedback</span><strong data-counter="feedback">--</strong></article>
+        <article><span>Project Status</span><strong>Stable</strong></article>
+      </section>
 
       <section class="release-banner" aria-labelledby="release-title">
         <div>
@@ -48,12 +87,6 @@
         </aside>
       </section>
 
-      <section class="snapshot-grid" aria-label="Project snapshot">
-        <article><strong>0</strong><span>Background pages</span></article>
-        <article><strong>0</strong><span>Network requests</span></article>
-        <article><strong>0</strong><span>Telemetry events</span></article>
-        <article><strong>500 ms</strong><span>Fallback check</span></article>
-      </section>
     </header>
 
     <main>
@@ -94,6 +127,7 @@
           <p>✓ No extension-made network requests</p>
           <p>✓ No Windows service, startup item, scheduled task, or helper server</p>
           <p>✓ Event-driven monitoring with one cached-video check every 500 ms</p>
+          <p>ℹ The public website uses GitHub's API and a visitor badge; neither is part of the browser extension.</p>
         </div>
       </section>
 
