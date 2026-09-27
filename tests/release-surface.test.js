@@ -38,3 +38,21 @@ test('GitHub Pages surface provides release, source, privacy, and installation p
   assert.match(css, /--gold:\s*#f4bf54/i);
   assert.match(css, /--azure:\s*#71d6ff/i);
 });
+
+test('GitHub Pages includes the shared banner, top overview, and live counters', () => {
+  const page = read('website', 'index.html');
+  const script = read('website', 'scripts', 'site.js');
+  const bannerPath = path.join(root, 'website', 'assets', 'my-guides-banner.png');
+
+  assert.match(page, /assets\/my-guides-banner\.png/);
+  assert.ok(fs.statSync(bannerPath).size > 100_000);
+  assert.match(page, /Project Overview/);
+  assert.match(page, /class="project-overview/);
+  assert.match(page, /visitor-badge\.laobi\.icu\/badge\?page_id=Shadow2442\.youtube-always-unmuted/i);
+  assert.match(page, /data-counter="stars"/);
+  assert.match(page, /data-counter="downloads"/);
+  assert.match(page, /data-counter="release"/);
+  assert.match(page, /data-counter="feedback"/);
+  assert.match(page, /scripts\/site\.js/);
+  assert.match(script, /api\.github\.com\/repos\/Shadow2442\/youtube-always-unmuted/i);
+});
