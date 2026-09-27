@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="YouTube Always Unmuted is a tiny, private-by-design Chromium extension that immediately restores YouTube video audio.">
+  <title>YouTube Always Unmuted | Project Release</title>
+  <link rel="stylesheet" href="styles/site.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="hero" id="top">
+      <nav class="topbar" aria-label="Primary navigation">
+        <div class="brand-block">
+          <span class="eyebrow">Project Transmission</span>
+          <a class="brand" href="#top">YouTube Always Unmuted</a>
+        </div>
+        <div class="top-links">
+          <a href="#overview">Overview</a>
+          <a href="#install">Install</a>
+          <a href="#privacy">Privacy</a>
+          <a href="#support">Support</a>
+          <a class="repo-link" href="https://github.com/Shadow2442/youtube-always-unmuted">GitHub Repo</a>
+        </div>
+      </nav>
+
+      <section class="release-banner" aria-labelledby="release-title">
+        <div>
+          <span class="banner-kicker">Shadow2442 Release / v1.0.0</span>
+          <h1 id="release-title">YouTube audio.<br>Always ready.</h1>
+          <p>A tiny Brave and Chromium extension that immediately clears YouTube's player mute state—without touching your chosen volume.</p>
+          <div class="hero-actions">
+            <a class="button primary" href="https://github.com/Shadow2442/youtube-always-unmuted/releases/latest">Download v1.0.0</a>
+            <a class="button secondary" href="#install">Installation guide</a>
+          </div>
+        </div>
+        <aside class="status-panel" aria-label="Release status">
+          <span class="status-label">Project Status</span>
+          <div class="status-pills">
+            <span class="status-pill active">Stable</span>
+            <span class="status-pill">Manifest V3</span>
+          </div>
+          <dl>
+            <div><dt>Release</dt><dd>v1.0.0</dd></div>
+            <div><dt>Target</dt><dd>Brave / Chromium</dd></div>
+            <div><dt>Response</dt><dd>&lt; 1 second</dd></div>
+          </dl>
+        </aside>
+      </section>
+
+      <section class="snapshot-grid" aria-label="Project snapshot">
+        <article><strong>0</strong><span>Background pages</span></article>
+        <article><strong>0</strong><span>Network requests</span></article>
+        <article><strong>0</strong><span>Telemetry events</span></article>
+        <article><strong>500 ms</strong><span>Fallback check</span></article>
+      </section>
+    </header>
+
+    <main>
+      <section class="section" id="overview">
+        <div class="section-heading"><span class="eyebrow">How it works</span><h2>One job, kept deliberately small.</h2></div>
+        <div class="card-grid three">
+          <article class="glass-card"><span class="card-number">01</span><h3>Detect</h3><p>The extension attaches to YouTube's active video element, including replacements created during in-page navigation.</p></article>
+          <article class="glass-card"><span class="card-number">02</span><h3>Unmute</h3><p>Media events trigger an immediate correction when the player becomes muted.</p></article>
+          <article class="glass-card"><span class="card-number">03</span><h3>Preserve</h3><p>Only the video element's mute flag changes. The selected volume remains exactly where you left it.</p></article>
+        </div>
+      </section>
+
+      <section class="section" id="install">
+        <div class="section-heading"><span class="eyebrow">Installation</span><h2>Load unpacked in Brave.</h2></div>
+        <div class="split-grid">
+          <ol class="glass-card steps">
+            <li><span>1</span>Download and extract the latest release ZIP.</li>
+            <li><span>2</span>Open <code>brave://extensions</code>.</li>
+            <li><span>3</span>Enable <strong>Developer mode</strong>.</li>
+            <li><span>4</span>Select <strong>Load unpacked</strong>.</li>
+            <li><span>5</span>Choose the extracted folder containing <code>manifest.json</code>.</li>
+            <li><span>6</span>Reload any YouTube tabs that were already open.</li>
+          </ol>
+          <aside class="glass-card context-card">
+            <span class="eyebrow">Quick test</span>
+            <h3>Mute the YouTube player.</h3>
+            <p>The player should restore audio in less than one second without changing its volume slider.</p>
+            <p class="note">Your keyboard, Windows, or Brave tab mute controls still work normally.</p>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section" id="privacy">
+        <div class="section-heading"><span class="eyebrow">Privacy and load</span><h2>No telemetry. No account. No background service.</h2></div>
+        <div class="glass-card checklist">
+          <p>✓ No telemetry, analytics, storage, or third-party code</p>
+          <p>✓ No service worker or background page</p>
+          <p>✓ No extension-made network requests</p>
+          <p>✓ No Windows service, startup item, scheduled task, or helper server</p>
+          <p>✓ Event-driven monitoring with one cached-video check every 500 ms</p>
+        </div>
+      </section>
+
+      <section class="section" id="support">
+        <div class="support-card">
+          <div><span class="eyebrow">Questions and feedback</span><h2>Something not behaving?</h2><p>Open a GitHub issue with your Brave version, the YouTube page type, and what happened.</p></div>
+          <div class="hero-actions"><a class="button primary" href="https://github.com/Shadow2442/youtube-always-unmuted/issues/new">Open feedback issue</a><a class="button secondary" href="https://github.com/Shadow2442/youtube-always-unmuted">View source</a></div>
+        </div>
+      </section>
+    </main>
+
+    <footer><span>YouTube Always Unmuted v1.0.0</span><a href="#top">Back to top ↑</a></footer>
+  </div>
+</body>
+</html>
