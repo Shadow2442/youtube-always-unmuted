@@ -67,6 +67,10 @@ a { color: inherit; }
 .release-banner::after { content: ""; position: absolute; width: 440px; height: 440px; right: -170px; bottom: -260px; border-radius: 50%; background: radial-gradient(circle, rgba(244,191,84,.24), transparent 66%); }
 h1, h2, h3, strong { font-family: "Arial Narrow", "Segoe UI", sans-serif; }
 h1 { margin: 14px 0 18px; max-width: 10ch; font-size: clamp(3rem, 7vw, 6.5rem); line-height: .91; letter-spacing: -.065em; }
+.origin-note { max-width: 68ch; margin: 20px 0; padding: 16px 18px; border-left: 3px solid var(--gold); border-radius: 0 16px 16px 0; background: rgba(5,10,19,.58); }
+.origin-note .eyebrow { display: block; margin-bottom: 8px; }
+.origin-note p { margin: 0; color: #d6def1; line-height: 1.6; }
+.origin-note p + p { margin-top: 8px; }
 .release-banner > div > p { max-width: 62ch; color: #d6def1; line-height: 1.7; font-size: 1.05rem; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 26px; }
 .button { display: inline-flex; justify-content: center; align-items: center; min-height: 46px; padding: 0 18px; border-radius: 999px; text-decoration: none; font-weight: 800; }

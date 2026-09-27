@@ -56,3 +56,13 @@ test('GitHub Pages includes the shared banner, top overview, and live counters',
   assert.match(page, /scripts\/site\.js/);
   assert.match(script, /api\.github\.com\/repos\/Shadow2442\/youtube-always-unmuted/i);
 });
+
+test('GitHub Pages explains the unresolved YouTube mute problem and workaround', () => {
+  const page = read('website', 'index.html');
+
+  assert.match(page, /Why we built it/i);
+  assert.match(page, /root cause[^<]*pending/i);
+  assert.match(page, /Incognito/i);
+  assert.match(page, /installed extensions/i);
+  assert.match(page, /workaround/i);
+});
