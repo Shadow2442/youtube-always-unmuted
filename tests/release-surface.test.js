@@ -66,3 +66,12 @@ test('GitHub Pages explains the unresolved YouTube mute problem and workaround',
   assert.match(page, /installed extensions/i);
   assert.match(page, /workaround/i);
 });
+
+test('GitHub Pages displays the complete guide banner without cropping it', () => {
+  const styles = read('website', 'styles', 'site.css');
+  const bannerRule = styles.match(/\.guide-banner img\s*\{([^}]*)\}/)?.[1] ?? '';
+
+  assert.match(bannerRule, /height:\s*auto/i);
+  assert.doesNotMatch(bannerRule, /aspect-ratio/i);
+  assert.doesNotMatch(bannerRule, /object-fit:\s*cover/i);
+});

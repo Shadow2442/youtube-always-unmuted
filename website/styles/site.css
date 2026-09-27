@@ -38,7 +38,7 @@ a { color: inherit; }
 .page-shell { width: min(1400px, calc(100% - 32px)); margin: 0 auto; padding: 24px 0 48px; }
 .hero { border: 1px solid var(--line); border-radius: 28px; padding: 24px 28px 30px; background: linear-gradient(135deg, rgba(17,29,51,.92), rgba(9,15,27,.88)); box-shadow: var(--shadow); overflow: hidden; }
 .guide-banner { display: block; margin: -5px -9px 22px; border: 1px solid rgba(255,255,255,.12); border-radius: 20px; overflow: hidden; box-shadow: 0 16px 42px rgba(0,0,0,.32); }
-.guide-banner img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 1; object-fit: cover; }
+.guide-banner img { display: block; width: 100%; height: auto; }
 .topbar { display: flex; justify-content: space-between; align-items: center; gap: 24px; margin-bottom: 28px; }
 .brand-block { display: flex; flex-direction: column; gap: 5px; }
 .eyebrow, .banner-kicker, .status-label { color: var(--gold); text-transform: uppercase; letter-spacing: .16em; font-size: .76rem; font-weight: 700; }
