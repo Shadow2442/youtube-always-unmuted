@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "YouTube Always Unmuted",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Immediately unmutes YouTube videos without changing their volume.",
   "content_scripts": [
     {

@@ -5,7 +5,7 @@ Date: 2026-09-26 (Europe/Zurich)
 ## Environment
 
 - Brave executable version: `154.1.96.59`
-- Extension: `YouTube Always Unmuted 0.1.0`
+- Extension candidate: `YouTube Always Unmuted 0.1.0` (the identical runtime code was promoted to `1.0.0`; only release metadata and documentation changed)
 - Extension ID: `bfcalfkljfpljbdokkiphpnmiapojcpf`
 - Installation: unpacked extension in Brave Developer mode
 - Installed source size: 6 files, 9,692 bytes
